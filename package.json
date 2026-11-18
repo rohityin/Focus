@@ -1,0 +1,11 @@
+{
+  "name": "focus-nsfw-blocker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Hard-locked Chrome extension that blocks adult sites and custom categories",
+  "scripts": {
+    "build": "node scripts/build-rules.mjs",
+    "test": "node --test tests/*.test.js"
+  }
+}

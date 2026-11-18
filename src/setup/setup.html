@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Focus — one-time setup</title>
+  <link rel="stylesheet" href="../styles/app.css">
+</head>
+<body>
+  <main class="page">
+    <h1>Set up Focus</h1>
+    <p>This is the only time you can change these settings. When you lock, protection cannot be turned off, whitelisted, or edited — uninstalling and reinstalling is the only reset. Read the categories carefully first.</p>
+
+    <div id="builtin"></div>
+
+    <h2>Your categories</h2>
+    <p class="muted">Add any extra sites you want blocked, grouped however you like. Domains cover their subdomains.</p>
+    <div id="categories" class="category-list"></div>
+
+    <div class="card stack">
+      <div class="row">
+        <input id="new-name" placeholder="Category name, e.g. Social" maxlength="60" aria-label="Category name">
+      </div>
+      <div class="row">
+        <input id="new-domains" placeholder="reddit.com, youtube.com" aria-label="Domains, comma separated">
+        <button id="add" class="ghost">Add</button>
+      </div>
+      <div id="error" class="error" role="alert"></div>
+    </div>
+
+    <div class="card">
+      <div class="row spread">
+        <div>
+          <div class="label">Ready to lock?</div>
+          <div class="muted">Blocking turns on immediately and stays on.</div>
+        </div>
+        <button id="lock" class="primary">Lock &amp; enable</button>
+      </div>
+      <div id="lock-error" class="error" role="alert"></div>
+    </div>
+  </main>
+  <script type="module" src="setup.js"></script>
+</body>
+</html>

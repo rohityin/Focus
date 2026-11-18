@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blocked by Focus</title>
+  <link rel="stylesheet" href="../styles/app.css">
+</head>
+<body>
+  <main class="page" style="margin-top:18vh">
+    <div class="card">
+      <div class="row spread">
+        <h1>Site blocked</h1>
+        <span class="badge locked">FOCUS</span>
+      </div>
+      <p id="reason">Focus stopped this navigation before the page loaded.</p>
+      <p id="site" class="muted"></p>
+      <p class="muted">This block is locked. There is no continue link. If this is a mistake, the blocklist cannot be changed without reinstalling Focus.</p>
+    </div>
+  </main>
+  <script type="module" src="blocked.js"></script>
+</body>
+</html>

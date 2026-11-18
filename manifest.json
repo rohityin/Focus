@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Focus — NSFW Blocker",
+  "version": "0.1.0",
+  "description": "Hard-locked blocker for adult sites and your own categories. Private by default.",
+  "permissions": [
+    "storage",
+    "alarms",
+    "tabs",
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "adult_safety_net",
+        "enabled": true,
+        "path": "public/rules/adult-block.json"
+      }
+    ]
+  },
+  "background": {
+    "service_worker": "src/background/service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "Focus — protection status"
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["src/blocked/blocked.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "minimum_chrome_version": "110"
+}
